@@ -12,3 +12,13 @@ function isObject(obj)
     return type === 'function' || type === 'object' && !!obj;
   }
 console.log(_keys({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}));
+
+
+
+var student =  { 
+  name : "David Rayy", 
+  sclass : "VI", 
+  rollno : 12  };
+console.log(student);
+delete student.rollno;
+console.log(student);

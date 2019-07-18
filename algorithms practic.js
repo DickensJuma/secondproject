@@ -43,13 +43,7 @@ function factorial(i) {
 
     } return product;
 }
-function factorial(i) {
-    var product = 1;
-    for (var i = i; i >= 1; --i) {
-        product *= i;
-    }
-    return product;
-}
+
 console.log(factorial(4));
 
 
@@ -78,16 +72,17 @@ for (let i = 0; i < nums.length; i++) {
 }
 console.log(sum); //55
 
-//creating an array fro string using .slip(" ") function.
+//creating an array fro string using .slit(" ") function.
 var str = "i am a genious and woderfully make";
 var words = str.split(" ");
 for (let i = 0; i < words.length; i++) {
     console.log(`word  ${i}: ${words[i]}`);
 
 }
+
+//Promp/if else
 var names = ["David", "Cynthia", "Raymond", "Clayton", "Jennifer"];
-prompt("Enter a name to search for: ");
-var name = readline();
+var name =  prompt("Enter a name to search for: ");
 var position = names.indexOf(name);
 if (position >= 0) {
     console.log();
@@ -104,11 +99,11 @@ var tostring = arr.join();
 console.log(tostring); //apple,banana,orange
 
 
-//creazting array by combining two array using concat()
+//creating array by combining two array using concat()
 var arr1 =['mike','pato','george'];
 var arr2 = ['elchapo', 'kip','stosh']
 var arr3 =arr1.concat(arr2);
-console.log(arr3);
+console.log(arr3);//[ 'mike', 'pato', 'george', 'elchapo', 'kip', 'stosh' ]
 
 
 //slice(3,3) delete 2 elements from index 3 
@@ -135,4 +130,93 @@ console.log(num);
 //removing an element from the start of an array
 var num = [1,2,3,4,5];
  num.shift();
-console.log(num);
+console.log(num); //[ 2, 3, 4, 5 ]
+
+//sorting number array
+function compare(num1, num2){
+    return num1 - num2;
+}
+const arr = [43,54,92,208,12,34,53,8];
+
+arr.sort(compare);
+
+console.log(arr);//[ 8, 12, 34, 43, 53, 54, 92, 208 ]
+
+
+function square(params1) {
+    console.log(params1, params1 *params1,(params1*params1) *(params1*params1));
+
+}
+const arr = [1,2,3,4,5,6];
+arr.forEach(square);
+
+//array validation
+const arrValidate = function(params) {
+    if(toString.call(params) === "[object Array]")
+        return true;
+        return false;
+    };
+
+console.log(arrValidate([1,2,3]));
+console.log(arrValidate("apple","mango"));
+
+
+//print 2-D array 
+const array = [[2,7,8,12],[32,5,76,8,7],[34,77,44]];
+
+for (const i in array) {
+    console.log("row " + i);
+    for(const j in array[i]){
+        console.log(" " + array[i][j]);
+    }    
+    }
+
+
+
+//array sum and product
+const array = [2,7,8,12];
+var sum=0;
+var product= 1;
+
+for(var i in array){
+    sum += array[i];
+    product *= array[i];
+}
+console.log("sum: " + sum + " product: "+ product);
+    
+//removing dublicate element iin array
+function dublicate(nums) {
+    var object ={};
+    var array =  [] ;
+    
+    for(var i in nums){
+        object[array[i]]=0;
+
+    }
+    for(var i in object){
+        array.push(object);
+    } return array;
+}
+ var arr = [3,4,5,2,3,4,5];
+ result = dublicate(arr);
+ console.log(result);
+ 
+
+ function removeDuplicates(num) {
+    var x,
+        len=num.length,
+        out=[],
+        obj={};
+   
+    for (x=0; x<len; x++) {
+      obj[num[x]]=0;
+    }
+    for (x in obj) {
+      out.push(x);
+    }
+    return out;
+  }
+  var Mynum = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+  result = removeDuplicates(Mynum);
+  console.log(Mynum);
+  console.log(result)

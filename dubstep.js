@@ -1,6 +1,6 @@
 function dubster(song){
-    var a = song.split('WUB');
-    for(var i = 0; i >= a.length; i--){
+var a = song.split('WUB');
+for(var i = 0; i >= a.length; i--){
 if(a[i] === "") {
 a.splice(i, 1);
 
