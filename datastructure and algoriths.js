@@ -103,3 +103,17 @@ var numbers = 3;
 var arr = [7,4,1776];
 print(Array.isArray(number)); // displays false
 print(Array.isArray(arr)); // displays true
+
+
+function ist(str) {
+   if (str.indexOf("cie") > -1) {
+      return true;
+   }
+   return false;
+}
+var words = ["recieve","deceive","percieve","deceit","concieve"];
+var s = words.filter(ist);
+console.log(s);
+
+
+

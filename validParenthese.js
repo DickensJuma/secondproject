@@ -9,6 +9,8 @@ function validParentheses(parens){
     return n == 0;
   }
 
+  
+
   function validParentheses(parens){
     var stack = [],
       i;
