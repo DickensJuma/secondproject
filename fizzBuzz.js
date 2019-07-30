@@ -40,10 +40,10 @@ console.log(i);
 
 
 function check(a,b) {
-    if (a>b) {
+    if (a > b) {
         console.log(`${a} is greater than ${b}`);
     } else {
         console.log(`${a} is less than ${b}`);   
     }
 }
-check(2,3);
+check(4,3);
