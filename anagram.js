@@ -1,20 +1,4 @@
-
-
-function isAnagram(test, original){
-    let result = original.filter(word=>{
-        let word1 = word.split('').sort().join('');
-        let word2 =test.split('').sort().join('');
-       return word1===word2;
-    })
-    return result;
-}
-console.log(isAnagram('aba',['baa','bee', 'aabb']));
-
-function towerBuilder(nFloors) {
-    var tower = [];
-    for (var i = 0; i < nFloors; i++) {
-      tower.push(" ".repeat(nFloors - i - 1) + "*".repeat((i * 2)+ 1) + " ".repeat(nFloors - i - 1));
-    }
+gi
     return tower;
   }
 
